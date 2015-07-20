@@ -4,3 +4,10 @@ ArtOfReading3FreeSetup.exe
 stamplog.txt
 log.txt
 ImageMagick
+Automated Translation/node_modules/google-translate/node_modules/
+Automated Translation/node_modules/
+temp/
+Automated Translation/.idea/
+Automated Translation/.settings/
+Automated Translation/AORTranslate-compiled.js
+Automated Translation/AORTranslate-compiled.js.map
