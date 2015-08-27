@@ -7,22 +7,23 @@
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
 AppId={{EABF2D6A-B9B9-48B1-8CC2-F7FEA667B653}
 AppName=Art Of Reading Free
-AppVersion=3.0
+AppVersion=3.0.1
 ;AppVerName=Art Of Reading Free 3.0
 AppPublisher=SIL International
 AppPublisherURL=http://SIL.org
-AppSupportURL=http://bloom.palaso.org/art-of-reading/
-AppUpdatesURL=http://bloom.palaso.org/art-of-reading/
+AppSupportURL=http://bloomlibrary.org/#/artofreading
+AppUpdatesURL=http://bloomlibrary.org/#/artofreading
 DefaultDirName={commonappdata}\SIL\Art Of Reading
 DefaultGroupName=Art Of Reading Free
 DisableProgramGroupPage=yes
 LicenseFile=..\License.txt
 InfoBeforeFile=..\Pre-InstallInfo.txt
-OutputDir=C:\dev\Art Of Reading
+OutputDir=D:\dev\Art Of Reading
 OutputBaseFilename=ArtOfReading3FreeSetup
 Compression=none
-SourceDir="C:\dev\Art Of Reading\Generated Art Of Reading\"
+SourceDir="D:\github\sillsdev\ArtOfReading\Generated Art Of Reading\"
 DisableDirPage=yes
+;SignTool=standard
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -30,10 +31,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 [Files]
 Source: "**.png"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "..\index.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\Automated Translation\ArtOfReadingMultilingualIndex.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\License.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\postInstall.bat"; DestDir: "{tmp}"
 
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
-
-[Run]
-Filename: "{tmp}\postInstall.bat"
