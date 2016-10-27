@@ -7,7 +7,7 @@
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
 AppId={{EABF2D6A-B9B9-48B1-8CC2-F7FEA667B653}
 AppName=Art Of Reading Free
-AppVersion=3.0.1
+AppVersion=3.1.0
 ;AppVerName=Art Of Reading Free 3.0
 AppPublisher=SIL International
 AppPublisherURL=http://SIL.org
@@ -18,10 +18,10 @@ DefaultGroupName=Art Of Reading Free
 DisableProgramGroupPage=yes
 LicenseFile=..\License.txt
 InfoBeforeFile=..\Pre-InstallInfo.txt
-OutputDir=D:\dev\Art Of Reading
+OutputDir=..\output
 OutputBaseFilename=ArtOfReading3FreeSetup
 Compression=none
-SourceDir="D:\github\sillsdev\ArtOfReading\Generated Art Of Reading\"
+SourceDir=".\"
 DisableDirPage=yes
 ;SignTool=standard
 
@@ -31,7 +31,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 [Files]
 Source: "**.png"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "..\index.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\Automated Translation\ArtOfReadingMultilingualIndex.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: ".\ArtOfReadingMultilingualIndex.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\License.txt"; DestDir: "{app}"; Flags: ignoreversion
 
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
