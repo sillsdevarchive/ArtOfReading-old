@@ -1,0 +1,82 @@
+----------------------
+Setting this up
+----------------------
+
+These batch files expect to find, at the same level, all these things
+
+1) A folder named "Art of Reading From DVD", with a sub-folder named "Images". Those should never be checked into the version control system.
+
+ArtOfReading
+    ArtOfReadingMultilingualIndex.txt
+    installer.iss
+    License.txt
+    Pre-InstallInfo.txt
+    |-- Art of Reading From DVD
+        |-- Images
+
+2) ImageMagick folder
+
+ImageMagick (Convert): http://www.imagemagick.org/script/convert.php
+The batch file expect that you have unzip the entire folder from the portable version from here in the root of this directory: http://www.imagemagick.org/script/binary-releases.php#windows
+and rename the folder "ImageMagick"
+
+3) PNGOut.exe
+
+PNGOut.exe is used to compress the daylights out of the png, so that they are in the end even smaller than the original tiffs
+
+4) ExifTool.exe
+
+ExifTool.exe : http://www.sno.phy.queensu.ca/~phil/exiftool/
+
+5) The .iss file is the installer script for innosetup. THat can be just installed, no need to put it any place special.
+
+-------------------------------------
+what the batch file does
+-------------------------------------
+
+Copy the whole Art of Reading folder to a new name
+For each tif
+	Make a PNG out of it
+	(and if the right command is uncommented): Stamp "SIL.AOR.CC-BY-ND" in the lower left
+	Delete the tif
+	Compress it really well
+	Push in metadata
+
+-------------------------------------
+Warnings
+-------------------------------------
+This is fine, it's what this program always says:
+	"convert: Unknown field with tag 37724 (0x935c) encountered. `TIFFReadDirectory' @ warning/...."
+
+-------------------------------------
+Relevant documentation on metadata
+------------------------------------_
+
+
+http://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/XMP.htm
+
+http://www.metadataworkinggroup.org/pdf/mwg_guidance.pdf
+
+
+----------------------
+index.txt
+----------------------
+SIL GPS (Dallas) created the index... the guy who did it has since retired.  He could only give me one with the English and Indonesian combined.  He did it on a mac, hence the colons for directory separators, which I've preserved.
+
+----------------------
+Authorization
+----------------------
+
+Here is the email that approves putting this in CC:
+
+From: Gayle Sheehan [mailto:Gayle_Sheehan@sil.org]
+Sent: Thursday, October 13, 2011 1:55 PM
+To: John Hatton
+Subject: Fwd: Re: International Illustrations CC license
+
+Hi John,
+
+Per my conversation with Alan, which was per his conversation with you, ;-D
+
+It is approved for you to work with the International Illustrations in the manner prescribed in the Creative Commons requirements.
+<snip>

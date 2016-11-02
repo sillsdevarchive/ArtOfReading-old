@@ -7,8 +7,8 @@
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
 AppId={{EABF2D6A-B9B9-48B1-8CC2-F7FEA667B653}
 AppName=Art Of Reading Free
-AppVersion=3.1.0
-;AppVerName=Art Of Reading Free 3.0
+AppVersion=3.2.0
+;AppVerName=Art Of Reading Free 3.2.0
 AppPublisher=SIL International
 AppPublisherURL=http://SIL.org
 AppSupportURL=http://bloomlibrary.org/#/artofreading
@@ -16,10 +16,10 @@ AppUpdatesURL=http://bloomlibrary.org/#/artofreading
 DefaultDirName={commonappdata}\SIL\Art Of Reading
 DefaultGroupName=Art Of Reading Free
 DisableProgramGroupPage=yes
-LicenseFile=..\License.txt
-InfoBeforeFile=..\Pre-InstallInfo.txt
-OutputDir=..\output
-OutputBaseFilename=ArtOfReading3FreeSetup
+LicenseFile=License.txt
+InfoBeforeFile=Pre-InstallInfo.txt
+OutputDir=output
+OutputBaseFilename=Art Of Reading Free Setup 3.2
 Compression=none
 SourceDir=".\"
 DisableDirPage=yes
@@ -29,9 +29,9 @@ DisableDirPage=yes
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
-Source: "**.png"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "..\index.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: ".\ArtOfReadingMultilingualIndex.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\License.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "Generated Art Of Reading\images\**.png"; DestDir: "{app}\images"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "index.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "ArtOfReadingMultilingualIndex.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "License.txt"; DestDir: "{app}"; Flags: ignoreversion
 
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
